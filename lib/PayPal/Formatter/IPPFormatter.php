@@ -1,5 +1,6 @@
 <?php
 namespace PayPal\Formatter;
+
 /**
  * Interface for all classes that format objects to
  * and from a on-wire representation
@@ -8,15 +9,16 @@ namespace PayPal\Formatter;
  * class that implements this interface
  *
  */
-interface IPPFormatter {
-	
-	/**
-	 * 
-	 * @param PPRequest $request The request to format
-	 * @param array $options Any formatter specific options 
-	 *   to be passed in 
-	 */
-	public function toString($request, $options=array());
-	
-	public function toObject($string, $options=array());
+interface IPPFormatter
+{
+    
+    /**
+     * 
+     * @param PPRequest $request The request to format
+     * @param array $options Any formatter specific options 
+     *   to be passed in 
+     */
+    public function toString($request, $options=array());
+    
+    public function toObject($string, $options=array());
 }
